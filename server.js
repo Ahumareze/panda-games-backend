@@ -45,4 +45,13 @@ app.post('/api/add-collection', (req, res) => {
     .catch(e => {
     res.status(404).json({message: "Error sending data"})
     })
+});
+
+// fetch collection function //
+app.get('/api/collections', (req, res) => {
+    Collection.find().then(r => {
+        res.status(201).json(r)
+    }).catch(e => {
+        res.status(404).json({message: "error fetching collection"})
+    })
 })
