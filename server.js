@@ -40,7 +40,7 @@ app.post('/api/add-collection', (req, res) => {
     });
 
     collection.save().then(r => {
-        res.status(201).json({message: "Posted successfully"})
+        res.status(201).json(r)
     })
     .catch(e => {
     res.status(404).json({message: "Error sending data"})
@@ -53,5 +53,28 @@ app.get('/api/collections', (req, res) => {
         res.status(201).json(r)
     }).catch(e => {
         res.status(404).json({message: "error fetching collection"})
+    })
+});
+
+// add game function //
+app.post('/api/add-game', (req, res) => {
+    const data = req.body;
+
+    const game = new Game({
+        name: data.name,
+        price: data.price,
+        images: data.images,
+        description: data.description,
+        platforms: data.platforms,
+        developers: data.developers,
+        releaseDate: data.releaseDate,
+        category: data.category,
+        categoryLink: data.categoryLink
+    });
+
+    game.save().then(r => {
+        res.status(201).json(r)
+    }).catch(e => {
+        res.status(404).json({message: 'error posting game'})
     })
 })
