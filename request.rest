@@ -37,3 +37,7 @@ Content-Type: application/json
     "category": "Role-playing",
     "categoryLink": "role-playing"
 }
+
+###
+GET http://localhost:5000/api/games
+Content-Type: application/json
