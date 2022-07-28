@@ -47,7 +47,7 @@ app.post('/api/add-collection', (req, res) => {
     })
 });
 
-// fetch collection function //
+// fetch collections function //
 app.get('/api/collections', (req, res) => {
     Collection.find().then(r => {
         res.status(201).json(r)
@@ -77,4 +77,13 @@ app.post('/api/add-game', (req, res) => {
     }).catch(e => {
         res.status(404).json({message: 'error posting game'})
     })
-})
+});
+
+// fetch games function //
+app.get('/api/games', (req, res) => {
+    Game.find().then(r => {
+        res.status(201).json(r)
+    }).catch(e => {
+        res.status(404).json({message: "error fetching game"})
+    })
+});
