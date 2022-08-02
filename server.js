@@ -7,6 +7,9 @@ const cors = require('cors');
 const Collection = require('./models/collection');
 const Game = require('./models/game');
 
+//data
+const collections = require('./data/collections');
+
 //initialization
 const app = express();
 app.use(express.json({limit: '50mb'}));
@@ -15,16 +18,16 @@ app.use(cors());
 require('dotenv').config();
 
 const PORT = process.env.PORT || 5000;
-
+app.listen(PORT);
 
 //connect to mongodb
-const dbUrl = process.env.dbUrl;
-mongoose.connect(dbUrl, {useNewUrlParser: true, useUnifiedTopology: true})
-  .then(r => {
-    console.log('connected to db ' + r);
-    app.listen(PORT);
-})
-.catch(e => console.log(e));
+// const dbUrl = process.env.dbUrl;
+// mongoose.connect(dbUrl, {useNewUrlParser: true, useUnifiedTopology: true})
+//   .then(r => {
+//     console.log('connected to db ' + r);
+//     app.listen(PORT);
+// })
+// .catch(e => console.log(e));
 
 // add collection function //
 app.post('/api/add-collection', (req, res) => {
@@ -49,11 +52,7 @@ app.post('/api/add-collection', (req, res) => {
 
 // fetch collections function //
 app.get('/api/collections', (req, res) => {
-    Collection.find().then(r => {
-        res.status(201).json(r)
-    }).catch(e => {
-        res.status(404).json({message: "error fetching collection"})
-    })
+    res.status(201).json(collections);
 });
 
 // add game function //
