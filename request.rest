@@ -27,5 +27,9 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:5000/api/games
+POST http://localhost:5000/api/games
 Content-Type: application/json
+
+{
+    "category": "adventure"
+}

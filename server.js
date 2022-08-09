@@ -58,9 +58,15 @@ app.post('/api/add-game', (req, res) => {
 });
 
 // fetch games function //
-app.get('/api/games', (req, res) => {
+app.post('/api/collection', (req, res) => {
     Game.find().then(r => {
-        res.status(201).json(r)
+        const arr = [];
+        r.map(i => {
+            if(i.category === req.body.category){
+                arr.push(i)
+            }
+        });
+        res.status(201).json(arr)
     }).catch(e => {
         res.status(404).json({message: "error fetching game"})
     })
