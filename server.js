@@ -18,37 +18,16 @@ app.use(cors());
 require('dotenv').config();
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT);
 
 //connect to mongodb
-// const dbUrl = process.env.dbUrl;
-// mongoose.connect(dbUrl, {useNewUrlParser: true, useUnifiedTopology: true})
-//   .then(r => {
-//     console.log('connected to db ' + r);
-//     app.listen(PORT);
-// })
-// .catch(e => console.log(e));
+const dbUrl = process.env.dbUrl;
+mongoose.connect(dbUrl, {useNewUrlParser: true, useUnifiedTopology: true})
+  .then(r => {
+    console.log('connected to db ' + r);
+    app.listen(PORT);
+})
+.catch(e => console.log(e));
 
-// add collection function //
-app.post('/api/add-collection', (req, res) => {
-    const data = req.body;
-
-    const collection = new Collection({
-        title: data.title,
-        name: data.name,
-        link: data.link,
-        image: data.image,
-        miniImage: data.miniImage,
-        details: data.details
-    });
-
-    collection.save().then(r => {
-        res.status(201).json(r)
-    })
-    .catch(e => {
-    res.status(404).json({message: "Error sending data"})
-    })
-});
 
 // fetch collections function //
 app.get('/api/collections', (req, res) => {
@@ -61,7 +40,7 @@ app.post('/api/add-game', (req, res) => {
 
     const game = new Game({
         name: data.name,
-        price: data.price,
+        prices: data.prices,
         images: data.images,
         description: data.description,
         platforms: data.platforms,

@@ -6,8 +6,8 @@ const gameSchema = new schema({
         type: String,
         required: true
     },
-    price: {
-        type: String,
+    prices: {
+        type: Array,
         require: true
     },
     images: {
@@ -17,10 +17,6 @@ const gameSchema = new schema({
     description: {
         type: String,
         require: true
-    },
-    platforms: {
-        type: Array,
-        required: true
     },
     developers: {
         type: String,

@@ -1,14 +1,3 @@
-POST http://localhost:5000/api/add-collection
-Content-Type: application/json
-
-{
-    "title": "Adrenaline Racing games",
-    "name": "Racing",
-    "link": "/racing",
-    "image": "https://res.cloudinary.com/ahumareze/image/upload/v1659043824/001-Best-Mobile-Racing-Games-1920x1080_ktnlco.jpg",
-    "miniImage": "https://res.cloudinary.com/ahumareze/image/upload/v1659043834/ios-racers-lead-asphalt-9_ulyt9o.jpg",
-    "details": "Get the best and highly in demand xbox, ps4, macos and windows racing games only on our store for discounted prices"
-}
 
 ###
 GET http://localhost:5000/api/collections
@@ -19,23 +8,22 @@ POST http://localhost:5000/api/add-game
 Content-Type: application/json
 
 {
-    "name": "Genshin Impact",
-    "price": 300,
+    "name": "God Of War 3",
     "images": [
-        "https://res.cloudinary.com/ahumareze/image/upload/v1659046001/maxresdefault_dvg7ac.jpg",
-        "https://res.cloudinary.com/ahumareze/image/upload/v1659045987/d3f72828e8a3c282d11a6c366832d813_5138359437520696934_cjrscp.jpg",
-        "https://res.cloudinary.com/ahumareze/image/upload/v1659045881/98d59918ee0e4ae8741acaaefdb00ed5_3852975062078225147_rkbvmg.jpg",
-        "https://res.cloudinary.com/ahumareze/image/upload/v1659045854/21087_1_qfgtss.jpg"
+        "https://res.cloudinary.com/ahumareze/image/upload/v1660081649/b4_hxvvtn.jpg",
+        "https://res.cloudinary.com/ahumareze/image/upload/v1660081710/god-of-war-iii-remastered-screen-20-ps4-us-16jun15_1245x700_fdfrab.jpg",
+        "https://res.cloudinary.com/ahumareze/image/upload/v1660081710/4iDVsamGcLvGqyiEizxi8c_kxtxub.jpg"
     ],
     "description": "Embark on a journey across Teyvat to find your lost sibling and seek answers from The Seven — the gods of each element. Explore this wondrous world, join forces with a diverse range of characters, and unravel the countless mysteries that Teyvat holds. Harness the seven elements to unleash elemental reactions. Anemo, Electro, Hydro, Pyro, Cryo, Dendro, and Geo interact in all sorts of ways, and Vision wielders have the power to turn this to their advantage. Will you vaporize Hydro with Pyro, electro-charge it with Electro, or freeze it with Cryo? Your mastery of the elements will give you the upper hand in battle and exploration.",
-    "platforms": [
-        "windows",
-        "macbook"
+    "prices": [
+        {"name": "ps4", "price": 21000},
+        {"name": "ps5", "price": 22000},
+        {"name": "xbox", "price": 25000}
     ],
     "developers": "miHoYo .Ltd",
     "releaseDate": "28 September 2020",
-    "category": "Role-playing",
-    "categoryLink": "role-playing"
+    "category": "adventure",
+    "categoryLink": "adventure"
 }
 
 ###
