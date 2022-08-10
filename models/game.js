@@ -37,6 +37,10 @@ const gameSchema = new schema({
     rating: {
         type: Number,
         require: true
+    },
+    age: {
+        type: Number,
+        require: true
     }
 });
 
