@@ -70,7 +70,7 @@ app.post('/api/collection', (req, res) => {
         });
         res.status(201).json(arr)
     }).catch(e => {
-        res.status(404).json({message: "error fetching game"})
+        res.status(404).json({message: "error fetching collection"})
     })
 });
 
@@ -82,5 +82,14 @@ app.post('/api/selected', (req, res) => {
         res.status(201).json(r)
     }).catch(e => {
         res.status(404).json({message: 'error fetching selected game'})
+    })
+});
+
+// fetch games //
+app.get('/api/games', (req, res) => {
+    Game.find().then(r => {
+        res.status(201).json(r)
+    }).catch(e => {
+        res.status(404).json({message: "error fetching games"})
     })
 })
