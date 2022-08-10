@@ -47,7 +47,8 @@ app.post('/api/add-game', (req, res) => {
         developers: data.developers,
         releaseDate: data.releaseDate,
         category: data.category,
-        categoryLink: data.categoryLink
+        categoryLink: data.categoryLink,
+        rating: data.rating
     });
 
     game.save().then(r => {
@@ -71,3 +72,14 @@ app.post('/api/collection', (req, res) => {
         res.status(404).json({message: "error fetching game"})
     })
 });
+
+// fetch selected game //
+app.post('/api/selected', (req, res) => {
+    const id = req.body.id;
+
+    Game.findById(id).then(r => {
+        res.status(201).json(r)
+    }).catch(e => {
+        res.status(404).json({message: 'error fetching selected game'})
+    })
+})

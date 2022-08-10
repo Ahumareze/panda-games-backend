@@ -33,3 +33,11 @@ Content-Type: application/json
 {
     "category": "adventure"
 }
+
+###
+POST  http://localhost:5000/api/selected
+Content-Type: application/json
+
+{
+    "id": ""
+}

@@ -34,6 +34,10 @@ const gameSchema = new schema({
         type: String,
         require: true
     },
+    rating: {
+        type: Number,
+        require: true
+    }
 });
 
 const Game = mongoose.model('game', gameSchema);
