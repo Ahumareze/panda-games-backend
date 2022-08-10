@@ -48,7 +48,8 @@ app.post('/api/add-game', (req, res) => {
         releaseDate: data.releaseDate,
         category: data.category,
         categoryLink: data.categoryLink,
-        rating: data.rating
+        rating: data.rating,
+        age: data.age
     });
 
     game.save().then(r => {
