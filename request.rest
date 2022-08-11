@@ -8,24 +8,23 @@ POST http://localhost:5000/api/add-game
 Content-Type: application/json
 
 {
-    "name": "God Of War 3",
-    "rating": 4,
-    "age": 12,
+    "name": "Call of Duty: Black Ops Cold Wa",
+    "rating": 3,
+    "age": 14,
     "images": [
-        "https://res.cloudinary.com/ahumareze/image/upload/v1660081649/b4_hxvvtn.jpg",
-        "https://res.cloudinary.com/ahumareze/image/upload/v1660081710/god-of-war-iii-remastered-screen-20-ps4-us-16jun15_1245x700_fdfrab.jpg",
-        "https://res.cloudinary.com/ahumareze/image/upload/v1660081710/4iDVsamGcLvGqyiEizxi8c_kxtxub.jpg"
+       "https://res.cloudinary.com/ahumareze/image/upload/v1660170232/BO-Cold-War-Reveal-Tout_s9zk1f.jpg",
+       "https://res.cloudinary.com/ahumareze/image/upload/v1660170232/b3f587e1-825b-4f13-880e-53584b66e58e_tnp05o.jpg",
+       "https://res.cloudinary.com/ahumareze/image/upload/v1660170232/3818833-cod_ihfujj.jpg"
     ],
     "description": "Embark on a journey across Teyvat to find your lost sibling and seek answers from The Seven — the gods of each element. Explore this wondrous world, join forces with a diverse range of characters, and unravel the countless mysteries that Teyvat holds. Harness the seven elements to unleash elemental reactions. Anemo, Electro, Hydro, Pyro, Cryo, Dendro, and Geo interact in all sorts of ways, and Vision wielders have the power to turn this to their advantage. Will you vaporize Hydro with Pyro, electro-charge it with Electro, or freeze it with Cryo? Your mastery of the elements will give you the upper hand in battle and exploration.",
     "prices": [
-        {"name": "ps4", "price": 21000},
-        {"name": "ps5", "price": 22500},
-        {"name": "xbox", "price": 24000}
+        {"name": "xbox", "price": 63500},
+        {"name": "ps5", "price": 62000}
     ],
-    "developers": "miHoYo .Ltd",
-    "releaseDate": "28 September 2020",
-    "category": "adventure",
-    "categoryLink": "adventure"
+    "developers": "Treyarch and Raven Software",
+    "releaseDate": "13 November 2020",
+    "category": "multiplayer",
+    "categoryLink": "multiplayer"
 }
 
 ###
@@ -37,9 +36,5 @@ Content-Type: application/json
 }
 
 ###
-POST  http://localhost:5000/api/selected
+GET  http://localhost:5000/api/games
 Content-Type: application/json
-
-{
-    "id": ""
-}
