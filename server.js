@@ -29,8 +29,9 @@ mongoose.connect(dbUrl, {useNewUrlParser: true, useUnifiedTopology: true})
 
 // fetch homepage data //
 app.get('/api/home', (req, res) => {
+    let newCollections = collections.splice(0, 4)
     let data = {
-        collections: collections.splice(0,4)
+        collections: newCollections
     };
     Game.find().then(r => {
 
