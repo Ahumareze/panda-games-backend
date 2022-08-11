@@ -92,4 +92,21 @@ app.get('/api/games', (req, res) => {
     }).catch(e => {
         res.status(404).json({message: "error fetching games"})
     })
-})
+});
+
+// fetch searched game //
+app.post('/api/search', (req, res) => {
+    const name = req.body;
+
+    Game.find().then(r => {
+        const arr = [];
+        r.map(i => {
+            if(i.name === name){
+                arr.push(i)
+            }
+        });
+        res.status(201).json(arr);
+    }).catch(e => {
+        res.status(404).json({message: "error fetching games"})
+    })
+});
