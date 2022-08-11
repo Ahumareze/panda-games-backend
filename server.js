@@ -96,12 +96,14 @@ app.get('/api/games', (req, res) => {
 
 // fetch searched game //
 app.post('/api/search', (req, res) => {
-    const name = req.body;
+    const name = req.body.name
 
     Game.find().then(r => {
         const arr = [];
         r.map(i => {
-            if(i.name === name){
+            const lowerI = i.name.toLowerCase();
+            const lowerName = name.toLowerCase();
+            if(lowerI === lowerName){
                 arr.push(i)
             }
         });

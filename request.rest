@@ -38,3 +38,11 @@ Content-Type: application/json
 ###
 GET  http://localhost:5000/api/games
 Content-Type: application/json
+
+###
+POST http://localhost:5000/api/search
+Content-Type: application/json
+
+{
+    "name": "Froza Horizon 5"
+}
