@@ -42,9 +42,9 @@ app.get('/api/home', (req, res) => {
             }
         });
 
-        data['main'] = arr;
+        data['recomended'] = arr;
         const splicedGames = r.splice(0, 4);
-        data['newGames'] = splicedGames;
+        data['new'] = splicedGames;
         
         res.status(201).json(data)
     }).catch(e => {
