@@ -4,7 +4,6 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 //models
-const Collection = require('./models/collection');
 const Game = require('./models/game');
 
 //data
@@ -27,6 +26,20 @@ mongoose.connect(dbUrl, {useNewUrlParser: true, useUnifiedTopology: true})
     app.listen(PORT);
 })
 .catch(e => console.log(e));
+
+// fetch homepage data //
+app.get('/api/home', (req, res) => {
+    let data = {
+        collections,
+    };
+    Game.find().then(r => {
+        const splicedGames = r.data.splice(0, 4);
+        data['newGames'] = splicedGames;
+        res.status(201).json(data)
+    }).catch(e => {
+        res.status(404).json({message: "Error fetching data"})
+    })
+})
 
 
 // fetch collections function //
