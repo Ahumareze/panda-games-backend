@@ -33,9 +33,21 @@ app.get('/api/home', (req, res) => {
         collections,
     };
     Game.find().then(r => {
-        const splicedGames = r.data.splice(0, 4);
+        const splicedGames = r.splice(0, 4);
         data['newGames'] = splicedGames;
-        res.status(201).json(data)
+
+        let reccomended = []
+        r.map(i => {
+            if(i.rating > 3){
+                reccomended.push(i)
+            }
+        });
+
+        const splicedReccomended = reccomended.splice(0, 4);
+        data['reccomended'] = splicedReccomended;
+
+        res.status(201).json(data);
+        
     }).catch(e => {
         res.status(404).json({message: "Error fetching data"})
     })

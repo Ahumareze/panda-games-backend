@@ -46,3 +46,7 @@ Content-Type: application/json
 {
     "name": "Froza Horizon 5"
 }
+
+###
+GET http://localhost:5000/api/home
+Content-Type: application/json
