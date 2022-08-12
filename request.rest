@@ -8,23 +8,23 @@ POST http://localhost:5000/api/add-game
 Content-Type: application/json
 
 {
-    "name": "Call of Duty: Black Ops Cold Wa",
-    "rating": 3,
-    "age": 14,
+    "name": "Assassin's Creed: Valhalla",
+    "rating": 4,
+    "age": 12,
     "images": [
-       "https://res.cloudinary.com/ahumareze/image/upload/v1660170232/BO-Cold-War-Reveal-Tout_s9zk1f.jpg",
-       "https://res.cloudinary.com/ahumareze/image/upload/v1660170232/b3f587e1-825b-4f13-880e-53584b66e58e_tnp05o.jpg",
-       "https://res.cloudinary.com/ahumareze/image/upload/v1660170232/3818833-cod_ihfujj.jpg"
+        "https://res.cloudinary.com/ahumareze/image/upload/v1660341931/AC_KINGDOM_PREORDER_STANDARD_EDITION_EPIC_Key_Art_Wide_3840x2160-3840x2160-485fe17203671386c71bde8110886c7d_l3rr41.jpg",
+        "https://res.cloudinary.com/ahumareze/image/upload/v1660341932/Assassins-Creed-Valhalla-Paris-Expansion-Cavalier_wmlqnt.jpg",
+        "https://res.cloudinary.com/ahumareze/image/upload/v1660341930/ubisoft-assassins-creed-valhalla_euk4mu.jpg"
     ],
-    "description": "Embark on a journey across Teyvat to find your lost sibling and seek answers from The Seven — the gods of each element. Explore this wondrous world, join forces with a diverse range of characters, and unravel the countless mysteries that Teyvat holds. Harness the seven elements to unleash elemental reactions. Anemo, Electro, Hydro, Pyro, Cryo, Dendro, and Geo interact in all sorts of ways, and Vision wielders have the power to turn this to their advantage. Will you vaporize Hydro with Pyro, electro-charge it with Electro, or freeze it with Cryo? Your mastery of the elements will give you the upper hand in battle and exploration.",
+    "description": "Become Eivor, a Viking raider raised to be a fearless warrior, and lead your clan from icy desolation in Norway to a new home amid the lush farmlands of ninth-century England. Find your settlement and conquer this hostile land by any means to earn a place in Valhalla. England in the age of the Vikings is a fractured nation of petty lords and warring kingdoms. Beneath the chaos lies a rich and untamed land waiting for a new conqueror. Will it be you?",
     "prices": [
-        {"name": "xbox", "price": 63500},
-        {"name": "ps5", "price": 62000}
+        {"name": "ps4", "price": 15000},
+        {"name": "ps5", "price": 20000}
     ],
-    "developers": "Treyarch and Raven Software",
-    "releaseDate": "13 November 2020",
-    "category": "multiplayer",
-    "categoryLink": "multiplayer"
+    "developers": "Ubisoft Montreal",
+    "releaseDate": "10 November, 2020",
+    "category": "action",
+    "categoryLink": "action"
 }
 
 ###
