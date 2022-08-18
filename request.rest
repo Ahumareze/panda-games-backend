@@ -4,27 +4,27 @@ GET http://localhost:5000/api/collections
 Content-Type: application/json
 
 ###
-POST http://localhost:5000/api/add-game
+POST https://panda-games-backend.herokuapp.com/api/add-game
 Content-Type: application/json
 
 {
-    "name": "Assassin's Creed: Valhalla",
-    "rating": 4,
-    "age": 12,
+    "name": "FIFA 22",
+    "rating": 5,
+    "age": 7,
     "images": [
-        "https://res.cloudinary.com/ahumareze/image/upload/v1660341931/AC_KINGDOM_PREORDER_STANDARD_EDITION_EPIC_Key_Art_Wide_3840x2160-3840x2160-485fe17203671386c71bde8110886c7d_l3rr41.jpg",
-        "https://res.cloudinary.com/ahumareze/image/upload/v1660341932/Assassins-Creed-Valhalla-Paris-Expansion-Cavalier_wmlqnt.jpg",
-        "https://res.cloudinary.com/ahumareze/image/upload/v1660341930/ubisoft-assassins-creed-valhalla_euk4mu.jpg"
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/1506830/capsule_616x353.jpg?t=1653581021",
+        "https://asset.vg247.com/fifa-22-best-centre-mids-overall-potential.jpg/BROK/resize/1920x1920%3E/format/jpg/quality/80/fifa-22-best-centre-mids-overall-potential.jpg",
+        "https://library.sportingnews.com/styles/twitter_card_120x120/s3/2021-10/trent-alexander-arnold-fifa-22_19afs2yt5z18615e8xmi64lwvv.jpg?itok=eRZovJ72"
     ],
-    "description": "Become Eivor, a Viking raider raised to be a fearless warrior, and lead your clan from icy desolation in Norway to a new home amid the lush farmlands of ninth-century England. Find your settlement and conquer this hostile land by any means to earn a place in Valhalla. England in the age of the Vikings is a fractured nation of petty lords and warring kingdoms. Beneath the chaos lies a rich and untamed land waiting for a new conqueror. Will it be you?",
+    "description": "FIFA 22 is a football simulation video game published by Electronic Arts. It is the 29th installment in the FIFA series, and was released worldwide on 1 October 2021 for Microsoft Windows, Nintendo Switch, PlayStation 4, PlayStation 5, Xbox One and Xbox Series X/S.[1] Players who pre-ordered the ultimate edition, however, received four days of early access and were able to play the game from 27 September.",
     "prices": [
-        {"name": "ps4", "price": 15000},
-        {"name": "ps5", "price": 20000}
+        {"name": "ps4", "price": 10000},
+        {"name": "ps5", "price": 1600}
     ],
-    "developers": "Ubisoft Montreal",
-    "releaseDate": "10 November, 2020",
-    "category": "action",
-    "categoryLink": "action"
+    "developers": "EA Studios",
+    "releaseDate": "27 September, 2021",
+    "category": "sports",
+    "categoryLink": "sports"
 }
 
 ###
