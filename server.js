@@ -48,8 +48,8 @@ app.get('/api/home', (req, res) => {
             }
         });
 
-        data['recomended'] = arr;
-        const splicedGames = r.splice(0, 4);
+        data['recomended'] = arr.splice(0, 8);
+        const splicedGames = r.splice(r.length - 5, 4);
         data['new'] = splicedGames;
         
         res.status(201).json(data)
